@@ -10,12 +10,16 @@ namespace WebAPIJumpStart.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(new[] { "a", "b" });
         }
 
-        // GET api/values/5
+        //// GET api/values/5
         public string Get(int id)
         {
             return "value";
